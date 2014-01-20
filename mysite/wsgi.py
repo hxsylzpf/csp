@@ -10,11 +10,9 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 import os, sys
 import site
 
-site.addsitedir('/opt/local/Library/Frameworks/Python.framework/Versions/2.6')
-sys.path.append('/Users/ubriela/DropboxUSC/Dropbox/_USC/Code/Python/Django/')
-sys.path.append('/Users/ubriela/DropboxUSC/Dropbox/_USC/Code/Python/Django/mysite')
-sys.path.append('/Users/ubriela/DropboxUSC/Dropbox/_USC/Code/Python/Django/mysite/mysite')
-sys.path.append('/Users/ubriela/DropboxUSC/Dropbox/_USC/Code/Python/Django/mysite/polls')
+sys.path.append('./')
+sys.path.append('./mysite')
+sys.path.append('./polls')
 
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
