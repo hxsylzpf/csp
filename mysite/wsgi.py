@@ -10,9 +10,9 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 import os, sys
 import site
 
-sys.path.append('./')
-sys.path.append('./mysite')
-sys.path.append('./polls')
+sys.path.append('D:\\home\\site\\wwwroot')
+sys.path.append('D:\\home\\site\\wwwroot\\mysite')
+sys.path.append('D:\\home\\site\\wwwroot\\polls')
 
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
