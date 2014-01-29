@@ -39,16 +39,39 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'polls',
     'books',
+    'geocrowd',
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
+    
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',    
 )
+"""
+CACHE_BACKEND = 'locmem:///?timeout=3600'
+#CACHE_MIDDLEWARE_ALIAS = 'geocrowd'
+CACHE_MIDDLEWARE_SECONDS = 3600
+CACHE_MIDDLEWARE_KEY_PREFIX = ''
+"""
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'geocrowd',
+        'TIMEOUT' : 3600,
+        'OPTIONS' : {
+                     'MAX_ENTRIES' : 1000
+        }
+    }
+}
+
+
 
 ROOT_URLCONF = 'mysite.urls'
 
