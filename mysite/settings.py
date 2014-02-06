@@ -40,7 +40,6 @@ INSTALLED_APPS = (
     'polls',
     'books',
     'geocrowd',
-    
 )
 
 MIDDLEWARE_CLASSES = (
