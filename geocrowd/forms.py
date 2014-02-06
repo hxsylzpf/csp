@@ -2,18 +2,24 @@ from django.forms import ModelForm
 from models import Geocrowd
 
 class GeocrowdForm(ModelForm):
+    
     class Meta:
         model = Geocrowd
-        fields = ['datasets', 'algos', 'ars', 'budgets', 'mars', 'mtds', 'us', 'costs']
+        fields = ['datasets', 'algos', 'ars', 'budgets', 'percents', 'mars', 'mtds', 'us', 'costs', 'subcells', 'localness']
+
+
         labels = {
             'datasets': 'Dataset',
             'algos' : 'Algorithm',
-            'ars': 'AR function',
-            'budgets': 'Budget',
-            'mars': 'MAR',
-            'mtds': 'MTD',
-            'us': 'Utility',
-            'costs': 'Cost function'
+            'ars' : 'AR function',
+            'budgets' : 'Budget',
+            'percents' : 'First level',
+            'mars' : 'MAR',
+            'mtds' : 'MTD',
+            'us' : 'Utility',
+            'costs' : 'Cost function',
+            'subcells' : 'Sub-region',
+            'localness' : 'Localness'
         }
     
     

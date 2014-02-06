@@ -27,12 +27,15 @@ def geocrowd(request):
             url = "http://137.135.57.140/param/?"
             url = url + "dataset=" + data['datasets']
             url = url + "&eps=" + data['budgets']
+            url = url + "&percent=" + data['percents']
             url = url + "&algo=" + data['algos']
             url = url + "&mar=" + data['mars']
             url = url + "&arf=" + data['ars']
             url = url + "&mtd=" + data['mtds']
             url = url + "&utl=" + data['us']
             url = url + "&cost=" + data['costs']
+            url = url + "&subcell=" + data['subcells']
+            url = url + "&localness=" + data['localness']
             url = url + "&rebuild=1"
         
             return HttpResponseRedirect(url)
