@@ -6,10 +6,19 @@ from geocrowd.models import Geocrowd
         
 # Create your views here.
 def geocrowd(request):
+    
+    
+    try:
+        a = Geocrowd.objects.get(pk=1)
+    except:
+        a = None
+    
     if request.method == 'POST':
         # http request
-        a = Geocrowd.objects.get(pk=1)
-        form = GeocrowdForm(request.POST, instance=a)
+        if a:
+            form = GeocrowdForm(request.POST, instance=a)
+        else:
+            form = GeocrowdForm(request.POST)
           
         if form.is_valid():
             # update database  
@@ -23,10 +32,13 @@ def geocrowd(request):
             url = url + "&arf=" + data['ars']
             url = url + "&mtd=" + data['mtds']
             url = url + "&utl=" + data['us']
+            url = url + "&cost=" + data['costs']
             url = url + "&rebuild=1"
         
             return HttpResponseRedirect(url)
     else:
-        a = Geocrowd.objects.get(pk=1)
-        form = GeocrowdForm(instance=a)
+        if a:
+            form = GeocrowdForm(instance=a)
+        else:
+            form = GeocrowdForm()
     return render(request, 'geocrowd_form.html', {'form':form})

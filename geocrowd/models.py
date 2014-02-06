@@ -45,6 +45,12 @@ u_choices = (
                 ('0.9', '0.9'),
                 )
 
+cost_choices = (
+                 ('utility','utility'),
+                 ('mixture','mixture'),
+                 ('compactness','compactness'),
+             )
+
 class Geocrowd(models.Model):
     datasets = models.CharField(max_length=10, null=False, blank=False, choices=datasets_choices)
     algos = models.CharField(max_length=10, choices=algo_choices)
@@ -53,6 +59,7 @@ class Geocrowd(models.Model):
     mars = models.CharField(max_length=10, choices=mar_choices)
     mtds = models.CharField(max_length=10, choices=mtd_choices)
     us = models.CharField(max_length=10, choices=u_choices)
+    costs = models.CharField(max_length=20, choices=cost_choices)
     
     def __unicode__(self):
         return self.datasets

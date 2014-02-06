@@ -4,7 +4,7 @@ from models import Geocrowd
 class GeocrowdForm(ModelForm):
     class Meta:
         model = Geocrowd
-        fields = ['datasets', 'algos', 'ars', 'budgets', 'mars', 'mtds', 'us']
+        fields = ['datasets', 'algos', 'ars', 'budgets', 'mars', 'mtds', 'us', 'costs']
         labels = {
             'datasets': 'Dataset',
             'algos' : 'Algorithm',
@@ -12,7 +12,8 @@ class GeocrowdForm(ModelForm):
             'budgets': 'Budget',
             'mars': 'MAR',
             'mtds': 'MTD',
-            'us': 'Utility'
+            'us': 'Utility',
+            'costs': 'Cost function'
         }
     
     
