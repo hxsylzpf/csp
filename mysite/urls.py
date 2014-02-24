@@ -6,6 +6,8 @@ from contact import views
 
 admin.autodiscover()
 
+
+
 urlpatterns = patterns('',
     # Examples:
     url(r'^polls/', include('polls.urls', namespace="polls")),

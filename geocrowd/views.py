@@ -31,9 +31,8 @@ def geocrowd(request):
             url = url + "&algo=" + data['algos']
             url = url + "&mar=" + data['mars']
             url = url + "&arf=" + data['ars']
-            url = url + "&mtd=" + data['mtds']
             url = url + "&utl=" + data['us']
-            url = url + "&cost=" + data['costs']
+            url = url + "&heuristic=" + data['heuristics']
             url = url + "&subcell=" + data['subcells']
             url = url + "&localness=" + data['localness']
             url = url + "&rebuild=1"

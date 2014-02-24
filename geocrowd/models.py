@@ -4,14 +4,11 @@ from django.db import models
 
 
 datasets_choices = (
-                ('mcdonald', 'McDonald'),
-                ('tiger', 'Tiger'),
-                ('shopping', 'Shopping'),
-                ('brightkite', 'Brightkite'),
+                ('gowalla_sf', 'Gowalla'),
+                ('yelp', 'Yelp'),
 )
 algo_choices = (
-#                     ('baseline', 'Baseline'),
-#                     ('naive', 'Naive'),
+                ('baseline', 'Baseline'),
                 ('greedy', 'Greedy'),
                 )
 ar_choices = (
@@ -39,21 +36,15 @@ mar_choices = (
                 ('0.7', '0.7'),
                 ('1.0', '1.0'),
                 )
-mtd_choices = (
-                ('50', '50'),
-                ('100', '100'),
-                ('150', '150'),
-                ('200', '200'),
-                )
 u_choices = (
                 ('0.6', '0.6'),
                 ('0.7', '0.7'),
                 ('0.8', '0.8'),
                 ('0.9', '0.9'),
                 )
-cost_choices = (
+heuristic_choices = (
                  ('utility','utility'),
-                 ('mixture','mixture'),
+                 ('hybrid','hybrid'),
                  ('compactness','compactness'),
              )
 bool_choices = (
@@ -68,9 +59,8 @@ class Geocrowd(models.Model):
     budgets = models.CharField(max_length=10, choices=budget_choices)
     percents = models.CharField(max_length=10, choices=percent_choices)
     mars = models.CharField(max_length=10, choices=mar_choices)
-    mtds = models.CharField(max_length=10, choices=mtd_choices)
     us = models.CharField(max_length=10, choices=u_choices)
-    costs = models.CharField(max_length=20, choices=cost_choices)
+    heuristics = models.CharField(max_length=20, choices=heuristic_choices)
     subcells = models.CharField(max_length=10, choices=bool_choices)
     localness = models.CharField(max_length=10, choices=bool_choices)
     

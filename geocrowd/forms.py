@@ -5,7 +5,7 @@ class GeocrowdForm(ModelForm):
     
     class Meta:
         model = Geocrowd
-        fields = ['datasets', 'algos', 'ars', 'budgets', 'percents', 'mars', 'mtds', 'us', 'costs', 'subcells', 'localness']
+        fields = ['datasets', 'algos', 'ars', 'budgets', 'percents', 'mars', 'us', 'heuristics', 'subcells', 'localness']
 
 
         labels = {
@@ -13,11 +13,10 @@ class GeocrowdForm(ModelForm):
             'algos' : 'Algorithm',
             'ars' : 'AR function',
             'budgets' : 'Budget',
-            'percents' : 'First level',
+            'percents' : 'First level budget',
             'mars' : 'MAR',
-            'mtds' : 'MTD',
             'us' : 'Utility',
-            'costs' : 'Cost function',
+            'heuristics' : 'Heuristic',
             'subcells' : 'Sub-region',
             'localness' : 'Localness'
         }
@@ -38,9 +37,6 @@ class GeocrowdForm(ModelForm):
 #             
 #     mars = forms.CharField(required=True, label = "MAR", max_length=10,
 #                 widget=forms.Select(choices=mar_choices))
-#     
-#     mtds = forms.CharField(required=True, label = "MTD", max_length=10,
-#                 widget=forms.Select(choices=mtd_choices))
 #     
 #     us = forms.CharField(required=True, label = "Utility", max_length=10,
 #                 widget=forms.Select(choices=u_choices))
