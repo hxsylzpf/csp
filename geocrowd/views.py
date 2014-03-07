@@ -28,13 +28,14 @@ def geocrowd(request):
             url = url + "dataset=" + data['datasets']
             url = url + "&eps=" + data['budgets']
             url = url + "&percent=" + data['percents']
-            url = url + "&algo=" + data['algos']
-            url = url + "&mar=" + data['mars']
-            url = url + "&arf=" + data['ars']
-            url = url + "&utl=" + data['us']
-            url = url + "&heuristic=" + data['heuristics']
-            url = url + "&subcell=" + data['subcells']
+#             url = url + "&algo=" + data['algos']
+#             url = url + "&mar=" + data['mars']
+#             url = url + "&arf=" + data['ars']
+#             url = url + "&utl=" + data['us']
+#             url = url + "&heuristic=" + data['heuristics']
+#             url = url + "&subcell=" + data['subcells']
             url = url + "&localness=" + data['localness']
+#             url = url + "&constraint=" + data['constraints']
             url = url + "&rebuild=1"
         
             return HttpResponseRedirect(url)

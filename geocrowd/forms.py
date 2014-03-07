@@ -5,19 +5,13 @@ class GeocrowdForm(ModelForm):
     
     class Meta:
         model = Geocrowd
-        fields = ['datasets', 'algos', 'ars', 'budgets', 'percents', 'mars', 'us', 'heuristics', 'subcells', 'localness']
+        fields = ['datasets', 'budgets', 'percents','localness']
 
 
         labels = {
             'datasets': 'Dataset',
-            'algos' : 'Algorithm',
-            'ars' : 'AR function',
             'budgets' : 'Budget',
             'percents' : 'First level budget',
-            'mars' : 'MAR',
-            'us' : 'Utility',
-            'heuristics' : 'Heuristic',
-            'subcells' : 'Sub-region',
             'localness' : 'Localness'
         }
     
