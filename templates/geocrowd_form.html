@@ -4,15 +4,17 @@
 </head>
 <body>
 
-    <h2>Select data to sanitize (datasets), privacy level (budget), <\br>
-    budget percentage for level-1 of Adaptive Grid (percents) and customized AG (localness) </h2>
+    <p>Select data to sanitize (datasets), </p>
+    <p>...privacy level (budget),</p> 
+    <p>...budget percentage (0.5 means 50%) for level-1 of Adaptive Grid (percents), </p>
+    <p>...and customized AG option (localness) </p>
     
     <form action="" method="post">
         <table>
             {{ form.as_table }}
         </table>
         {% csrf_token %}
-        <input type="submit" name="submit" value="Run">
+        <input type="submit" name="submit" value="Publish">
     </form>
 </body>
 </html>
