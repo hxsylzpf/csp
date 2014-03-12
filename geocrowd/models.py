@@ -20,10 +20,10 @@ percent_choices = (
                 ('0.2', '0.2'),
                 ('0.1', '0.1'),
                 )
-# algo_choices = (
-#                 ('baseline', 'Baseline'),
-#                 ('greedy', 'Greedy'),
-#                 )
+algo_choices = (
+                ('baseline', 'Baseline'),
+                ('greedy', 'Greedy'),
+                )
 # ar_choices = (
 #                 ('linear', 'Linear'),
 #                 ('zipf', 'Zipf'),
