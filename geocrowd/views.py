@@ -24,7 +24,7 @@ def geocrowd(request):
             # update database  
             form.save(commit=True)
             data = form.cleaned_data
-            url = "http://137.135.57.140/param?"
+            url = "http://137.135.57.140/param/"
             url = url + "dataset=" + data['datasets']
             url = url + "&eps=" + data['budgets']
             url = url + "&percent=" + data['percents']
