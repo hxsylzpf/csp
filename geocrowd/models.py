@@ -2,23 +2,23 @@ from django.db import models
 
 # Create your models here.
 
-
 datasets_choices = (
-                ('gowalla_sf', 'Gowalla'),
-                ('yelp', 'Yelp'),
+                ('gowalla_LA', 'Gowalla_LA'),
+                ('gowalla_SF', 'Gowalla_SF'),
+                ('yelp', 'Yelp')
 )
 budget_choices = (
-                ('0.1', '0.1'),
-                ('0.4', '0.4'),
-                ('0.7', '0.7'),
                 ('1.0', '1.0'),
+                ('0.7', '0.7'),
+                ('0.4', '0.4'),
+                ('0.1', '0.1'),
                 )
 percent_choices = (
-                ('0.1', '0.1'),
-                ('0.2', '0.2'),
-                ('0.3', '0.3'),
-                ('0.4', '0.4'),
                 ('0.5', '0.5'),
+                ('0.4', '0.4'),
+                ('0.3', '0.3'),
+                ('0.2', '0.2'),
+                ('0.1', '0.1'),
                 )
 # algo_choices = (
 #                 ('baseline', 'Baseline'),
