@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 datasets_choices = (
-                ('gowalla_LA', 'Gowalla_LA'),
-                ('gowalla_SF', 'Gowalla_SF'),
+                ('gowallala', 'Gowalla_LA'),
+                ('gowallasf', 'Gowalla_SF'),
                 ('yelp', 'Yelp')
 )
 budget_choices = (
